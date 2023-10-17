@@ -11,6 +11,11 @@
       "price": "90",
       "img": "https://m.media-amazon.com/images/I/61GPIaYQobL._AC_UL320_.jpg",
       "id": "21e67128-70cf-4a39-a170-08819d82f0e0"
+    },
+    {
+      "exemplo": "um valor",
+      "testando": 100,
+      "id": "b0affd8c-d3b1-43e7-a9f2-de026c9bd441"
     }
   ]
 }

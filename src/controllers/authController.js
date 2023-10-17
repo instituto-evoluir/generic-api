@@ -1,5 +1,5 @@
 
-import Books from "../models/books.js";
+import Items from "../models/item.js";
 
 class AuthController {
 

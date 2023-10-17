@@ -15,7 +15,7 @@ const adapter = new JSONFile(file)
 const defaultData = { posts: [] }
 const db = new Low(adapter, defaultData)
 
-class Books {
+class Items {
 
     static async insert(bookData) {
         bookData.id = uuidv4();
@@ -39,12 +39,7 @@ class Books {
         await db.read();
         for(const book of db.data.books) {
             if(book.id == bookId) {
-                if(bookData.title) book.title = bookData.title;
-                if(bookData.author) book.author = bookData.author;
-                if(bookData.publisher) book.publisher = bookData.publisher;
-                if(bookData.price) book.price = bookData.price;
-                if(bookData.stock) book.stock = bookData.stock;
-                if(bookData.img) book.img = bookData.img;
+                // todo
 
                 await db.write();
                 return book;
@@ -59,4 +54,4 @@ class Books {
     }
 }
 
-export default Books;
+export default Items;
