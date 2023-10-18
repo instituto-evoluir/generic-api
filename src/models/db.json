@@ -15,7 +15,9 @@
     {
       "exemplo": "um valor",
       "testando": 100,
-      "id": "b0affd8c-d3b1-43e7-a9f2-de026c9bd441"
+      "id": "b0affd8c-d3b1-43e7-a9f2-de026c9bd441",
+      "price": "1.00",
+      "tempo": "bom"
     }
   ]
 }

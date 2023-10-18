@@ -39,7 +39,7 @@ class Items {
         await db.read();
         for(const book of db.data.books) {
             if(book.id == bookId) {
-                // todo
+                update(book, bookData);
 
                 await db.write();
                 return book;
@@ -52,6 +52,19 @@ class Items {
         db.data.books = db.data.books.filter( (book) => book.id != bookId );
         await db.write();
     }
+}
+
+function update(obj/*, …*/) {
+    for (var i=1; i<arguments.length; i++) {
+        for (var prop in arguments[i]) {
+            var val = arguments[i][prop];
+            if (typeof val == "object")
+                update(obj[prop], val);
+            else
+                obj[prop] = val;
+        }
+    }
+    return obj;
 }
 
 export default Items;
